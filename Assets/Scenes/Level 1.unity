@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 369629244}
   - component: {fileID: 369629247}
   - component: {fileID: 369629248}
+  - component: {fileID: 369629249}
   m_Layer: 5
   m_Name: ConfirmCodeButton
   m_TagString: Untagged
@@ -806,26 +807,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e092c8b5c29191445a148694c6c24f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dodge: 5
-  smoothing: 7.5
-  tilt: 10
-  startWait: {x: 0, y: 0}
-  maneuverTime: {x: 0, y: 0}
-  maneuverWait: {x: 0, y: 0}
-  boundary:
-    xMin: 0
-    xMax: 0
-    zMin: 0
-    zMax: 0
-  thrust: 0
-  target: {fileID: 0}
-  speed: 0
+  playerTransform: {fileID: 0}
   hazards: []
   spawnValues: {x: 0, y: 0, z: 0}
   hazardCount: 0
   waveWait: 0
-  shot: {fileID: 0}
-  shotSpawn: {fileID: 0}
+  shot: {fileID: 1260500424729728, guid: 31a801850df9cce4fb2556a61ffc503a, type: 2}
+  shotSpawn: {fileID: 1804732710}
+--- !u!82 &369629249
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 369629242}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bf75b984df8a84987bcf3a8bf6e2862d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!224 &386275983 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22400004, guid: 05a81c3d5091440058129444d28322f3,
@@ -1730,7 +1798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &872357040
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5599,6 +5667,7 @@ MonoBehaviour:
   shot: {fileID: 1260500424729728, guid: 2ddda2dd0919b5f4abf338b229307988, type: 2}
   shotSpawn: {fileID: 1804732710}
   fireRate: 0.25
+  playerTransform: {fileID: 0}
 --- !u!1 &1328554068
 GameObject:
   m_ObjectHideFlags: 0
@@ -5730,20 +5799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e092c8b5c29191445a148694c6c24f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dodge: 5
-  smoothing: 7.5
-  tilt: 10
-  startWait: {x: 0, y: 0}
-  maneuverTime: {x: 0, y: 0}
-  maneuverWait: {x: 0, y: 0}
-  boundary:
-    xMin: 0
-    xMax: 0
-    zMin: 0
-    zMax: 0
-  thrust: 0
-  target: {fileID: 0}
-  speed: 0
+  playerTransform: {fileID: 0}
   hazards:
   - {fileID: 1629084654436242, guid: f63cacb897af0fb49a6746517442027b, type: 2}
   - {fileID: 1262101059992330, guid: 7df0fe775937d584285d4525ab67809b, type: 2}
@@ -5752,8 +5808,8 @@ MonoBehaviour:
   spawnValues: {x: 0, y: 0, z: 0}
   hazardCount: 4
   waveWait: 0
-  shot: {fileID: 1260500424729728, guid: 2ddda2dd0919b5f4abf338b229307988, type: 2}
-  shotSpawn: {fileID: 1804732710}
+  shot: {fileID: 0}
+  shotSpawn: {fileID: 0}
 --- !u!4 &1424738399
 Transform:
   m_ObjectHideFlags: 0
