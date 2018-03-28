@@ -27,8 +27,13 @@ public class LoadLevelsMenu : MonoBehaviour {
 		MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query2, mycon2);
 		DataSet ds = new DataSet();
 		dataAdapter.Fill(ds);
-		if ((ds.Tables[0].ToString()).Length == 0)
+		if ((ds.Tables [0].ToString ()).Length == 0) {
 			Debug.Log ("No user exists!");
+			LoadLevelMenu ();
+		
+		}
+
+
 		else {
 			string db_password = (ds.Tables[0].Rows[0][0]).ToString();
 			if (db_password == userPassword.text)

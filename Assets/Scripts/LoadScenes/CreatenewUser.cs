@@ -23,12 +23,23 @@ public class CreatenewUser : MonoBehaviour {
 		mycon.Open(); 
 		string query = "insert into Player(Username, Password) values(" + "'"+ userName.text +"'"+ ", " + "'"+userPassword.text+"'" + ");";
 		MySqlCommand mycmd = new MySqlCommand(query, mycon);
-		if (mycmd.ExecuteNonQuery() > 0)  
-			Debug.Log("Create a new user success!"); 
+		if (mycmd.ExecuteNonQuery () > 0) {
+			Debug.Log ("Create a new user success!"); 
+			LoadLevelMenu ();
+		}
+		LoadLevelMenu ();//this should be delete when the database is on;
 		mycon.Close();
 	}
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	public void LoadLevelMenu()
+	{
+
+		if (userName.text != null)// && userPassword.text != null)
+		{
+			SceneManager.LoadScene(1);
+		}
 	}
 }
