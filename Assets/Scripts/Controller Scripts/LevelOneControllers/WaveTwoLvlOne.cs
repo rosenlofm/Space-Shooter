@@ -80,11 +80,13 @@ public class WaveTwoLvlOne : MonoBehaviour
         {
             GameObject hazard = hazards[1];
 
-            Vector3 spawnPosition = new Vector3(xPos + xOffset, 0f, zPos + zOffset);
+            //Vector3 spawnPosition = new Vector3(xPos + xOffset, 0f, zPos + zOffset);
+            Vector3 spawnPosition = new Vector3(8, 0f, zPos + zOffset);
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(hazard, spawnPosition, spawnRotation);
 
-            xOffset += 3;
+            //xOffset += 3;
+            zOffset += 3;
             if (xPos >= xMax && zPos < zMax)
             {
                 xOffset = 3; zOffset += 3;
