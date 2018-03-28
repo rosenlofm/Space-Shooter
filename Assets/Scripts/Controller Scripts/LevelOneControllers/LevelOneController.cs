@@ -4,62 +4,48 @@ using UnityEngine;
 
 public class LevelOneController : MonoBehaviour
 {
+//**** player ship information ****//
+    public GameObject shot;
+    public Transform shotSpawn;
     public Transform playerTransform;
+    public float thrust = 3;
 
-    private float thrust = 3;
+    private enum IsMoving { None, Left, Right }
+    IsMoving moving = IsMoving.None;
+    private bool movingLeft;
+    private bool movingRight;
+//**** player ship information ****//
 
 //**** each wave and the wave's enemy information ****//
     private enum Waves { One, Two, Three }
     Waves wave;
-    int enemyCount;
-    private bool canShoot; // controls when the ship can fire
-
-    float[] waveOneEnemyLocations = { 3, 6, 9, 12 };
-    float[] waveTwoEnemyLocations = { 3, 6, 9, 12 };
-    float[] waveThreeEnemyLocations = { 3, 6, 9, 12 };
-//**** each wave and the wave's enemy information ****//
-
 
     public GameObject[] hazards;
-    //public static GameObject[] hazardsArray;
-    public Vector3 spawnValues;
     public int hazardCount;
-    //public float spawnWait;
-    //public float startWait;
-    public float waveWait;
-    //public int waveCount;
 
+    private float xPos = 3f;  // leftmost x position on playing field
+    private float zPos = 3f;  // bottom-most z position on playing field
+    private float xOffset = 0f;
+    private float zOffset = 0f;
+    private float xMax = 12f;  // rightmost x position on playing field
+    private float zMax = 12f;  // uppermost z position on playing field
 
-    float xPos = 3f;  // leftmost x position on playing field
-    float zPos = 3f;  // bottom-most z position on playing field
-    float xOffset = 0f;
-    float zOffset = 0f;
-    float xMax = 12f;  // rightmost x position on playing field
-    float zMax = 12f;  // uppermost z position on playing field
-
-    public GameObject shot;
-    public Transform shotSpawn;
-    // automate player/enemy moves
-
-
-    enum IsMoving { None, Left, Right }
-    IsMoving moving = IsMoving.None;
-    Vector3 testVector;
-
-    //LevelOnePlayerController levelOnePlayerController = new LevelOnePlayerController();
+    private float[] waveOneEnemyLocations = { 3, 6, 9, 12 };
+    private float[] waveTwoEnemyLocations = { 3, 6 };
+    private float[] waveThreeEnemyLocations = { 3, 6, 9, 12 };
+    private int enemyCount;
+    //**** each wave and the wave's enemy information ****//
 
 
     // Use this for initialization
     void Start ()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-        //StartCoroutine(SpawnWaves());
-        SpawnWaveOne();
+        SpawnWaveOne();  
     }
 
     // Update is called once per frame
-    void Update ()
+    void FixedUpdate ()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -75,7 +61,7 @@ public class LevelOneController : MonoBehaviour
                 StopAndShoot();
 
                 enemyCount++;
-                if (enemyCount < 4) { EnactWaveOne(enemyCount); }
+                if (enemyCount < waveOneEnemyLocations.Length) { EnactWaveOne(enemyCount); }
                 else { /* all enemies are destroyed */ }
             }
             else if (moving == IsMoving.Right && playerTransform.position.x >= waveOneEnemyLocations[enemyCount])
@@ -84,7 +70,7 @@ public class LevelOneController : MonoBehaviour
                 StopAndShoot();
 
                 enemyCount++;
-                if (enemyCount < 4) { EnactWaveOne(enemyCount); }
+                if (enemyCount < waveOneEnemyLocations.Length) { EnactWaveOne(enemyCount); }
                 else { /* all enemies are destroyed */ }
             }
 
@@ -94,33 +80,32 @@ public class LevelOneController : MonoBehaviour
 
         else if (wave == Waves.Two)
         {
-            if (moving == IsMoving.Left) 
+            if (moving == IsMoving.Left && playerTransform.position.x <= waveTwoEnemyLocations[enemyCount]) 
             {
-                if (playerTransform.position.x <= waveTwoEnemyLocations[enemyCount])
-                {
-                    moving = IsMoving.None;
-                    StopAndShoot();
+                moving = IsMoving.None;
+                StopAndShoot();
 
-                    enemyCount++;
-                    if (enemyCount < 4) { EnactWaveTwo(enemyCount); }
-                    else { /* all enemies are destroyed */ }
-                }
+                enemyCount++;
+                if (enemyCount < waveTwoEnemyLocations.Length) { EnactWaveTwo(enemyCount); }
+                else { /* all enemies are destroyed */ }
             }
-            else if (moving == IsMoving.Right) 
+            else if (moving == IsMoving.Right && playerTransform.position.x >= waveTwoEnemyLocations[enemyCount]) 
             {
-                if(playerTransform.position.x >= waveTwoEnemyLocations[enemyCount])
-                {
-                    moving = IsMoving.None;
-                    StopAndShoot();
-
-                    enemyCount++;
-                    if (enemyCount < 4) { EnactWaveTwo(enemyCount); }
-                    else { /* all enemies are destroyed */ }
-                }
+                moving = IsMoving.None;
+                StopAndShoot();
+                
+                enemyCount++;
+                if (enemyCount < waveTwoEnemyLocations.Length) { EnactWaveTwo(enemyCount); }
+                else { /* all enemies are destroyed */ }
             }
 
             if (moving == IsMoving.Left) { playerTransform.Translate(Vector3.left * thrust * Time.deltaTime); }
             if (moving == IsMoving.Right) { playerTransform.Translate(Vector3.right * thrust * Time.deltaTime); }
+        }
+
+        else if (wave == Waves.Three)
+        {
+
         }
 
 
@@ -150,26 +135,11 @@ public class LevelOneController : MonoBehaviour
         }
     }
 
-    private void SpawnWaveTwo()
-    {
-        //yield return new WaitForSeconds(startWait);
-        for (int i = 0; i < hazardCount; i++)
-        {
-            GameObject hazard = hazards[1];
-
-            Vector3 spawnPosition = new Vector3(xPos + xOffset, 0f, zPos + zOffset);
-            Quaternion spawnRotation = Quaternion.identity;
-            Instantiate(hazard, spawnPosition, spawnRotation);
-
-            xOffset += 3;
-            if (xPos >= xMax && zPos < zMax) { xOffset = 3; zOffset += 3; }
-        }
-    }
-
     // Use this for initialization
     public void WaveOneAction()
     {
         wave = Waves.One;
+
         enemyCount = 0;
         SpawnWaveOne();
 
@@ -182,6 +152,22 @@ public class LevelOneController : MonoBehaviour
     private void EnactWaveOne(float enemyLocation)
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    private void SpawnWaveTwo()
+    {
+        //yield return new WaitForSeconds(startWait);
+        for (int i = 4; i < hazardCount; i++)
+        {
+            GameObject hazard = hazards[1];
+
+            Vector3 spawnPosition = new Vector3(xPos + xOffset, 0f, zPos + zOffset);
+            Quaternion spawnRotation = Quaternion.identity;
+            Instantiate(hazard, spawnPosition, spawnRotation);
+
+            xOffset += 3;
+            if (xPos >= xMax && zPos < zMax) { xOffset = 3; zOffset += 3; }
+        }
     }
 
     public void WaveTwoAction()
@@ -202,7 +188,6 @@ public class LevelOneController : MonoBehaviour
 
         Debug.Log("****WaveTwoAction invoked...");
         Debug.Log("Player location is: " + playerTransform.position);
-
         Debug.Log("Enemy's position: " + waveOneEnemyLocations);
 
         //while (playerTransform.position.x < enemyPosition)
@@ -213,10 +198,8 @@ public class LevelOneController : MonoBehaviour
 
             moving = IsMoving.Right;  // tells Update() to call SmoothMove() Coroutine with a right direction
 
-            //levelOnePlayerController.MoveRight(playerTransform, 3f);
         }
-        //while (playerTransform.position.x > enemyPosition)
-        if (playerTransform.position.x > enemyLocation)
+        else if (playerTransform.position.x > enemyLocation)
         {
             Debug.Log("player is farther right than enemy");
             //playerTransform.Translate(Vector3.left);// * Time.deltaTime);
@@ -224,6 +207,11 @@ public class LevelOneController : MonoBehaviour
             moving = IsMoving.Left;  // tells Update() to call SmoothMove() Coroutine with a left direction
 
         }
+    }
+
+    private void SpawnWaveThree()
+    {
+
     }
 
     void WaveThreeAction()

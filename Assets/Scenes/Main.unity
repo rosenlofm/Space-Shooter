@@ -285,6 +285,30 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1112475568301654, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989086921990126, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: NewUsernameInputField
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310316911992584, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: NewPasswordInputField
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328465279180132, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: CreateNewUserButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151738046824634, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: CreateNewUserText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324110711325808, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
   m_IsPrefabParent: 0
@@ -304,6 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6810565d59c2e4f418b6b52760a49268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userName: {fileID: 1016220089}
+  userPassword: {fileID: 1591788632}
 --- !u!132 &688788871 stripped
 GUIText:
   m_PrefabParentObject: {fileID: 132370502812781808, guid: e8092dda95a82034fb056b3c08931326,
@@ -396,6 +422,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9930946b7c5f48e44aef1e56c2de7315, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1016220089 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114491966498045358, guid: f51645ea1d09a744c8110bf64cb1baa9,
+    type: 2}
+  m_PrefabInternal: {fileID: 223482008}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!132 &1035376158 stripped
 GUIText:
   m_PrefabParentObject: {fileID: 132700567430455112, guid: e8092dda95a82034fb056b3c08931326,
@@ -567,6 +599,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86adc6687a332244185f511867e4ab2f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1591788632 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114832747082042264, guid: f51645ea1d09a744c8110bf64cb1baa9,
+    type: 2}
+  m_PrefabInternal: {fileID: 223482008}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1616407255
 Prefab:
   m_ObjectHideFlags: 0

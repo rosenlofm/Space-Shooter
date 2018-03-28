@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoadLevelsMenu : MonoBehaviour {
+public class LoadLevelsMenuExistingUser : MonoBehaviour {
 
     public InputField userName;
     public InputField userPassword;
@@ -20,20 +20,14 @@ public class LoadLevelsMenu : MonoBehaviour {
     // Update is called once per frame
     public void LoadLevelMenu()
     {
-
-        if (userName.text != null)// && userPassword.text != null)
+        // check username and password against the database
+        if (userName.text == null || userPassword.text == null)
+        {
+            
+        }
+        else if (userName.text != null)// && userPassword.text != null)
         {
             SceneManager.LoadScene(1);
         }
     }
-    /*
-        public void Quit()
-        {
-    #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-    #else
-            Application.Quit();
-    #endif
-        }
-        */
 }
