@@ -590,11 +590,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Collab: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: b58ab1ee-5e71-405b-948c-399ac909e533
+  projectName: SpaceShooter
+  organizationId: mark-rosenlof
   cloudEnabled: 0
   enableNewInputSystem: 0
