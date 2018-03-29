@@ -43,7 +43,11 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   serializedVersion: 9
+=======
+  serializedVersion: 11
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
 =======
   serializedVersion: 11
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
@@ -170,14 +174,20 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 1
 =======
+=======
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
+<<<<<<< HEAD
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
+=======
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
       objectReference: {fileID: 0}
     - target: {fileID: 224852612067630366, guid: f51645ea1d09a744c8110bf64cb1baa9,
@@ -281,6 +291,7 @@ Prefab:
     - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+<<<<<<< HEAD
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
@@ -385,6 +396,97 @@ Prefab:
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
       value: 1
       objectReference: {fileID: 0}
+=======
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 223482011}
+    - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: create_new_user
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112475568301654, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989086921990126, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: NewUsernameInputField
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310316911992584, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: NewPasswordInputField
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328465279180132, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: CreateNewUserButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151738046824634, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_Name
+      value: CreateNewUserText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324110711325808, guid: f51645ea1d09a744c8110bf64cb1baa9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+<<<<<<< HEAD
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+>>>>>>> 018401df5abd19bfaf13b26375bf290b70b6fe2b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 644472640}
+    - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: get_password_from_database
+      objectReference: {fileID: 0}
+    - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609291580616888, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
     - target: {fileID: 114412060062048392, guid: f51645ea1d09a744c8110bf64cb1baa9,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -429,7 +531,11 @@ GameObject:
     type: 2}
   m_PrefabInternal: {fileID: 223482008}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &223482010
+=======
+--- !u!114 &223482011
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
 =======
 --- !u!114 &223482011
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
@@ -441,7 +547,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 6810565d59c2e4f418b6b52760a49268, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 26d0efb4d9e7b774fb6679cf151ff8dc, type: 3}
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
 =======
   m_Script: {fileID: 11500000, guid: 26d0efb4d9e7b774fb6679cf151ff8dc, type: 3}
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
@@ -450,7 +560,10 @@ MonoBehaviour:
   userName: {fileID: 1016220089}
   userPassword: {fileID: 1591788632}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
 --- !u!1 &644472638 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1573278621752346, guid: f51645ea1d09a744c8110bf64cb1baa9,
@@ -469,6 +582,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: {fileID: 693102749}
   userPassword: {fileID: 714864636}
+<<<<<<< HEAD
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
+=======
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
 --- !u!132 &688788871 stripped
 GUIText:
@@ -476,7 +592,10 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 1494896945}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
 --- !u!114 &693102749 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114844087108655318, guid: f51645ea1d09a744c8110bf64cb1baa9,
@@ -489,6 +608,9 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 223482008}
   m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+<<<<<<< HEAD
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
+=======
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
 --- !u!132 &924825574 stripped
 GUIText:
@@ -848,6 +970,7 @@ Prefab:
 GUIText:
   m_PrefabParentObject: {fileID: 132950037485082238, guid: e8092dda95a82034fb056b3c08931326,
 <<<<<<< HEAD
+<<<<<<< HEAD
     type: 2}
   m_PrefabInternal: {fileID: 1494896945}
 --- !u!4 &1804732710 stripped
@@ -855,12 +978,17 @@ Transform:
   m_PrefabParentObject: {fileID: 4421836342648842, guid: ddebef9f0b2f9a64cb329b0736b00ba2,
     type: 2}
 =======
+=======
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
     type: 2}
   m_PrefabInternal: {fileID: 1494896945}
 --- !u!4 &1804732710 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4421836342648842, guid: ddebef9f0b2f9a64cb329b0736b00ba2,
     type: 2}
+<<<<<<< HEAD
+>>>>>>> parent of fe8ce11... Collabignore and added prefabs
+=======
 >>>>>>> parent of fe8ce11... Collabignore and added prefabs
   m_PrefabInternal: {fileID: 1616407255}
 --- !u!1001 &1869956550
