@@ -21,7 +21,7 @@ public class LoadLevelsMenu : MonoBehaviour {
     public void LoadLevelMenu()
     {
 
-        if (userName.text != null && userPassword.text != null)
+        if (userName.text != null)// && userPassword.text != null)
         {
             SceneManager.LoadScene(1);
         }
