@@ -122,7 +122,6 @@ public class ReadmeEditor : Editor {
 		if (m_Initialized)
 			return;
 		m_BodyStyle = new GUIStyle(EditorStyles.label);
-		Debug.Log (m_BodyStyle);
 		m_BodyStyle.wordWrap = true;
 		m_BodyStyle.fontSize = 14;
 		
