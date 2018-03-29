@@ -199,6 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6810565d59c2e4f418b6b52760a49268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userName: {fileID: 399699911}
+  userPassword: {fileID: 399699911}
 --- !u!114 &152715116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6810565d59c2e4f418b6b52760a49268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userName: {fileID: 0}
+  userPassword: {fileID: 0}
 --- !u!114 &309438006
 MonoBehaviour:
   m_ObjectHideFlags: 0

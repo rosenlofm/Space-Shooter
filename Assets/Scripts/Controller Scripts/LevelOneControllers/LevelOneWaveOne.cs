@@ -139,7 +139,7 @@ public class LevelOneWaveOne : MonoBehaviour {
         if (playerTransform.position.x < enemyLocation)
         {
             enabled = true;
-            Debug.Log("player is farther right than enemy");
+            Debug.Log("enemy is farther right than enemy");
             movingRight = true;
            // moving = IsMoving.Right;  // tells Update() to move player right
         }
